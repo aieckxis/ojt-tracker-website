@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OJT Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🗓️ OJT Tracker</h1>
+
+    <label>Date:</label>
+    <input type="date" id="date" />
+
+    <label>Time In:</label>
+    <input type="time" id="timeIn" />
+
+    <label>Time Out:</label>
+    <input type="time" id="timeOut" />
+
+    <label>What did you do today?</label>
+    <textarea id="activity" rows="3" placeholder="Describe your tasks..."></textarea>
+
+    <label>Transportation - Going to work (₱):</label>
+    <input type="number" id="transpoTo" />
+
+    <label>Transportation - Going home (₱):</label>
+    <input type="number" id="transpoFrom" />
+
+    <label>Food Expense (₱):</label>
+    <input type="number" id="food" />
+
+    <label>
+      <input type="checkbox" id="foodFree" />
+      Food was free today
+    </label>
+
+    <button onclick="generateSummary()">✨ Summarize with AI</button>
+    <button onclick="saveEntry()">💾 Save Entry</button>
+
+    <p id="aiSummary"></p>
+
+    <hr/>
+
+    <h2>📋 Log Summary</h2>
+    <div id="logContainer"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
